@@ -1,6 +1,6 @@
-/* ==================================================
-   1. 全域
-================================================== */
+/* =========================
+   全域
+========================= */
 
 * {
   box-sizing: border-box;
@@ -11,12 +11,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-
   width: 100%;
   min-height: 100%;
 
-  /* 整個手機網頁背景：純白 */
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 body {
@@ -39,9 +37,9 @@ textarea {
 }
 
 
-/* ==================================================
-   2. 整個頁面
-================================================== */
+/* =========================
+   整個頁面
+========================= */
 
 .page {
   width: 100%;
@@ -51,24 +49,22 @@ textarea {
     7px
     0;
 
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 
-/* ==================================================
-   3. 上方讀書計畫區
-================================================== */
+/* =========================
+   上方讀書計畫
+========================= */
 
 .study-card {
   width: 100%;
 
   padding: 6px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
-  border:
-    1px solid
-    #ebe8e3;
+  border: 1px solid #ebe8e3;
 
   border-radius: 11px;
 
@@ -76,9 +72,9 @@ textarea {
 }
 
 
-/* ==================================================
-   4. 上方表格滑動
-================================================== */
+/* =========================
+   上方表格滑動
+========================= */
 
 .table-wrapper {
   width: 100%;
@@ -92,13 +88,13 @@ textarea {
 
   scrollbar-width: thin;
 
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 
-/* ==================================================
-   5. 表格
-================================================== */
+/* =========================
+   表格
+========================= */
 
 table {
   border-collapse: separate;
@@ -109,7 +105,7 @@ table {
 
   min-width: max-content;
 
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 th,
@@ -122,9 +118,9 @@ td {
 }
 
 
-/* ==================================================
-   6. 日期
-================================================== */
+/* =========================
+   日期
+========================= */
 
 thead th {
   position: sticky;
@@ -138,7 +134,7 @@ thead th {
 
   height: 26px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
   white-space: nowrap;
 }
@@ -164,9 +160,9 @@ thead th {
 }
 
 
-/* ==================================================
-   7. 科目
-================================================== */
+/* =========================
+   科目
+========================= */
 
 .subject-header {
   position: sticky;
@@ -200,7 +196,7 @@ thead th {
 
   height: 23px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
   font-size: 9px;
 
@@ -212,9 +208,9 @@ thead th {
 }
 
 
-/* ==================================================
-   8. 上方讀書小方塊
-================================================== */
+/* =========================
+   上方讀書方塊
+========================= */
 
 .study-cell {
   min-width: 25px;
@@ -238,8 +234,7 @@ thead th {
   width: 18px;
   height: 18px;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 
   background: #f0efec;
 
@@ -257,11 +252,9 @@ thead th {
 }
 
 
-/* ==================================================
-   9. 八科顏色
-================================================== */
-
-/* 中會 */
+/* =========================
+   八科顏色
+========================= */
 
 .subject-0.planned .study-square {
   background: #e7c0b2;
@@ -271,9 +264,6 @@ thead th {
   background: #ad706b;
 }
 
-
-/* 高會 */
-
 .subject-1.planned .study-square {
   background: #f0dfb5;
 }
@@ -281,9 +271,6 @@ thead th {
 .subject-1.completed .study-square {
   background: #b59b69;
 }
-
-
-/* 管會 */
 
 .subject-2.planned .study-square {
   background: #d2dac9;
@@ -293,9 +280,6 @@ thead th {
   background: #8b9b8d;
 }
 
-
-/* 審計 */
-
 .subject-3.planned .study-square {
   background: #cdd7db;
 }
@@ -303,9 +287,6 @@ thead th {
 .subject-3.completed .study-square {
   background: #81939c;
 }
-
-
-/* 稅法 */
 
 .subject-4.planned .study-square {
   background: #dcd9e1;
@@ -315,9 +296,6 @@ thead th {
   background: #958f9f;
 }
 
-
-/* 公司法 */
-
 .subject-5.planned .study-square {
   background: #e2dacf;
 }
@@ -326,9 +304,6 @@ thead th {
   background: #9c907e;
 }
 
-
-/* 證交法 */
-
 .subject-6.planned .study-square {
   background: #d7d5d1;
 }
@@ -336,9 +311,6 @@ thead th {
 .subject-6.completed .study-square {
   background: #898985;
 }
-
-
-/* 商會法 */
 
 .subject-7.planned .study-square {
   background: #ddc6b5;
@@ -349,9 +321,9 @@ thead th {
 }
 
 
-/* ==================================================
-   10. 完成堂數
-================================================== */
+/* =========================
+   完成堂數
+========================= */
 
 .count-header {
   min-width: 38px !important;
@@ -372,22 +344,18 @@ thead th {
 
   height: 23px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
   color: #55504c;
 }
 
 .count-number {
-  display: inline;
-
   font-size: 9px;
 
   font-weight: 700;
 }
 
 .count-text {
-  display: inline;
-
   margin-left: 1px;
 
   font-size: 7px;
@@ -396,18 +364,22 @@ thead th {
 }
 
 
-/* ==================================================
-   11. 下方學習紀錄區
-================================================== */
+/* =========================
+   下方紀錄區
+
+   強制純白背景
+========================= */
 
 .records-section {
+  position: relative;
+
   width: calc(100% + 14px);
 
   margin-left: -7px;
 
   margin-top: 14px;
 
-  background: #ffffff;
+  background: #ffffff !important;
 
   overflow: visible;
 
@@ -415,9 +387,9 @@ thead th {
 }
 
 
-/* ==================================================
-   12. 卡片橫向滑動區
-================================================== */
+/* =========================
+   卡片滑動軌道
+========================= */
 
 .records-carousel {
   display: flex;
@@ -426,9 +398,6 @@ thead th {
 
   width: 100%;
 
-  overflow-x: auto;
-  overflow-y: visible;
-
   padding:
     8px
     9vw
@@ -436,7 +405,10 @@ thead th {
 
   gap: 0;
 
-  background: #ffffff;
+  overflow-x: auto;
+  overflow-y: visible;
+
+  background: #ffffff !important;
 
   scroll-snap-type: x mandatory;
 
@@ -454,24 +426,28 @@ thead th {
 }
 
 
-/* ==================================================
-   13. 每一科的大卡片
+/* =========================
+   大卡片
 
-   ★ 淡灰白 → 純白
-   ★ 往下逐漸消失
-================================================== */
+   注意：
+   卡片自己完全沒有背景！
+
+   真正的背景交給 ::before，
+   這樣才能只讓背景消失，
+   不影響文字和紀錄。
+========================= */
 
 .record-card {
   position: relative;
 
-  flex: 0 0 82vw;
+  flex:
+    0
+    0
+    82vw;
 
   width: 82vw;
 
-  /*
-    夠長，可以容納之後的學習紀錄
-  */
-  min-height: 130vh;
+  min-height: 120vh;
 
   height: auto;
 
@@ -480,46 +456,17 @@ thead th {
   padding:
     21px
     17px
-    180px;
+    160px;
 
   scroll-snap-align: center;
 
-  transform-origin: center top;
-
+  transform-origin:
+    center top;
 
   /*
-    重點：
-    上方淡灰白，
-    往下逐漸變成純白。
-
-    因為整個網站背景就是純白，
-    所以最後會自然融進背景。
+    本體透明
   */
-
-  background:
-    linear-gradient(
-      to bottom,
-
-      #f4f4f3 0%,
-
-      rgba(245, 245, 244, 0.96) 18%,
-
-      rgba(247, 247, 246, 0.90) 32%,
-
-      rgba(248, 248, 247, 0.78) 44%,
-
-      rgba(250, 250, 249, 0.60) 56%,
-
-      rgba(251, 251, 250, 0.42) 66%,
-
-      rgba(253, 253, 252, 0.22) 76%,
-
-      rgba(254, 254, 254, 0.08) 84%,
-
-      #ffffff 92%,
-
-      #ffffff 100%
-    );
+  background: transparent !important;
 
   border: none;
 
@@ -529,16 +476,11 @@ thead th {
     0
     0;
 
-
-  /*
-    預設卡片在後方
-  */
-
   transform:
     scale(0.82)
     translateY(34px);
 
-  opacity: 0.28;
+  opacity: 0.25;
 
   transition:
     transform 0.32s
@@ -554,11 +496,11 @@ thead th {
 }
 
 
-/* ==================================================
-   14. 卡片上方邊線
+/* =========================
+   ★ 真正的卡片背景 ★
 
-   邊線本身也會往下淡掉
-================================================== */
+   這一層會真的透明消失
+========================= */
 
 .record-card::before {
   content: "";
@@ -567,21 +509,20 @@ thead th {
 
   top: 0;
   left: 0;
-  right: 0;
 
-  height: 68%;
+  width: 100%;
+  height: 100%;
 
-  border-top:
-    1px solid
-    rgba(210, 210, 208, 0.58);
-
-  border-left:
-    1px solid
-    rgba(210, 210, 208, 0.48);
-
-  border-right:
-    1px solid
-    rgba(210, 210, 208, 0.48);
+  /*
+    淡淡的灰白玻璃卡
+  */
+  background:
+    rgba(
+      239,
+      239,
+      237,
+      0.68
+    );
 
   border-radius:
     26px
@@ -591,59 +532,138 @@ thead th {
 
   pointer-events: none;
 
+
   /*
-    邊線往下消失
+    ★ 核心 ★
+
+    0～32%：
+    卡片完整
+
+    32～55%：
+    開始淡
+
+    55～78%：
+    明顯消失
+
+    88%：
+    完全透明
   */
 
   -webkit-mask-image:
     linear-gradient(
       to bottom,
 
-      #000 0%,
+      rgba(0, 0, 0, 1) 0%,
 
-      #000 25%,
+      rgba(0, 0, 0, 1) 32%,
 
-      rgba(0, 0, 0, 0.78) 40%,
+      rgba(0, 0, 0, 0.88) 42%,
 
-      rgba(0, 0, 0, 0.48) 55%,
+      rgba(0, 0, 0, 0.65) 54%,
 
-      rgba(0, 0, 0, 0.18) 68%,
+      rgba(0, 0, 0, 0.40) 64%,
 
-      transparent 82%
+      rgba(0, 0, 0, 0.18) 74%,
+
+      rgba(0, 0, 0, 0.05) 82%,
+
+      rgba(0, 0, 0, 0) 88%,
+
+      transparent 100%
     );
 
   mask-image:
     linear-gradient(
       to bottom,
 
-      #000 0%,
+      rgba(0, 0, 0, 1) 0%,
 
-      #000 25%,
+      rgba(0, 0, 0, 1) 32%,
 
-      rgba(0, 0, 0, 0.78) 40%,
+      rgba(0, 0, 0, 0.88) 42%,
 
-      rgba(0, 0, 0, 0.48) 55%,
+      rgba(0, 0, 0, 0.65) 54%,
 
-      rgba(0, 0, 0, 0.18) 68%,
+      rgba(0, 0, 0, 0.40) 64%,
 
-      transparent 82%
+      rgba(0, 0, 0, 0.18) 74%,
+
+      rgba(0, 0, 0, 0.05) 82%,
+
+      rgba(0, 0, 0, 0) 88%,
+
+      transparent 100%
     );
 
   z-index: 0;
 }
 
 
-/* ==================================================
-   15. 正中央卡片
+/* =========================
+   卡片頂端細線
+========================= */
 
-   往前跑
-================================================== */
+.record-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 52%;
+
+  border-top:
+    1px solid
+    rgba(205, 205, 202, 0.55);
+
+  border-left:
+    1px solid
+    rgba(205, 205, 202, 0.40);
+
+  border-right:
+    1px solid
+    rgba(205, 205, 202, 0.40);
+
+  border-radius:
+    26px
+    26px
+    0
+    0;
+
+  pointer-events: none;
+
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 35%,
+      rgba(0, 0, 0, 0.55) 58%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 35%,
+      rgba(0, 0, 0, 0.55) 58%,
+      transparent 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================
+   正中央卡片
+========================= */
 
 .record-card.active {
   transform:
     scale(1)
-    translateY(0)
-    rotateY(0deg);
+    translateY(0);
 
   opacity: 1;
 
@@ -651,48 +671,48 @@ thead th {
 }
 
 
-/* ==================================================
-   16. 左邊卡片
-================================================== */
+/* =========================
+   左側卡片
+========================= */
 
 .record-card.before {
   transform:
     translateX(8vw)
-    translateY(36px)
+    translateY(35px)
     scale(0.80)
     rotateY(13deg);
 
-  opacity: 0.22;
+  opacity: 0.20;
 
   z-index: 2;
 }
 
 
-/* ==================================================
-   17. 右邊卡片
-================================================== */
+/* =========================
+   右側卡片
+========================= */
 
 .record-card.after {
   transform:
     translateX(-8vw)
-    translateY(36px)
+    translateY(35px)
     scale(0.80)
     rotateY(-13deg);
 
-  opacity: 0.22;
+  opacity: 0.20;
 
   z-index: 2;
 }
 
 
-/* ==================================================
-   18. 科目名稱
-================================================== */
+/* =========================
+   科目名稱
+========================= */
 
 .record-subject {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   margin:
     5px
@@ -711,14 +731,14 @@ thead th {
 }
 
 
-/* ==================================================
-   19. 日期選擇
-================================================== */
+/* =========================
+   日期
+========================= */
 
 .record-date {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   display: block;
 
@@ -741,7 +761,12 @@ thead th {
   outline: none;
 
   background:
-    rgba(255, 255, 255, 0.82);
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
 
   font-size: 14px;
 
@@ -758,14 +783,14 @@ thead th {
 }
 
 
-/* ==================================================
-   20. 學習內容輸入
-================================================== */
+/* =========================
+   輸入學習內容
+========================= */
 
 .record-input {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   display: block;
 
@@ -788,7 +813,12 @@ thead th {
   outline: none;
 
   background:
-    rgba(255, 255, 255, 0.82);
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
 
   font-size: 15px;
 
@@ -799,7 +829,12 @@ thead th {
 
 .record-input::placeholder {
   color:
-    rgba(90, 82, 74, 0.35);
+    rgba(
+      90,
+      82,
+      74,
+      0.35
+    );
 }
 
 .record-input:focus {
@@ -809,14 +844,14 @@ thead th {
 }
 
 
-/* ==================================================
-   21. 歷史紀錄區
-================================================== */
+/* =========================
+   歷史紀錄
+========================= */
 
 .history-list {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
   width: 100%;
 
@@ -824,18 +859,16 @@ thead th {
 }
 
 
-/* ==================================================
-   22. 沒紀錄時完全不要文字
-================================================== */
+/* 不顯示尚無紀錄 */
 
 .history-empty {
   display: none !important;
 }
 
 
-/* ==================================================
-   23. 每一筆學習紀錄
-================================================== */
+/* =========================
+   每筆紀錄
+========================= */
 
 .history-item {
   position: relative;
@@ -852,13 +885,13 @@ thead th {
 
   border-left:
     1px solid
-    rgba(82, 75, 68, 0.14);
+    rgba(
+      82,
+      75,
+      68,
+      0.14
+    );
 }
-
-
-/* ==================================================
-   24. 紀錄圓點
-================================================== */
 
 .history-item::before {
   content: "";
@@ -874,13 +907,18 @@ thead th {
   border-radius: 50%;
 
   background:
-    rgba(82, 75, 68, 0.46);
+    rgba(
+      82,
+      75,
+      68,
+      0.46
+    );
 }
 
 
-/* ==================================================
-   25. 紀錄日期
-================================================== */
+/* =========================
+   紀錄日期
+========================= */
 
 .history-date {
   margin-bottom: 8px;
@@ -892,13 +930,18 @@ thead th {
   letter-spacing: 0.5px;
 
   color:
-    rgba(70, 65, 60, 0.58);
+    rgba(
+      70,
+      65,
+      60,
+      0.58
+    );
 }
 
 
-/* ==================================================
-   26. 紀錄內容
-================================================== */
+/* =========================
+   紀錄文字
+========================= */
 
 .history-text {
   font-size: 14px;
@@ -913,15 +956,19 @@ thead th {
 }
 
 
-/* ==================================================
-   27. 手機版
-================================================== */
+/* =========================
+   手機版
+========================= */
 
 @media (max-width: 600px) {
 
   html,
-  body {
-    background: #ffffff;
+  body,
+  .page,
+  .records-section,
+  .records-carousel {
+    background:
+      #ffffff !important;
   }
 
 
@@ -930,15 +977,11 @@ thead th {
       7px
       7px
       0;
-
-    background: #ffffff;
   }
 
 
   .records-section {
     margin-top: 14px;
-
-    background: #ffffff;
   }
 
 
@@ -947,8 +990,6 @@ thead th {
       8px
       9vw
       0;
-
-    background: #ffffff;
   }
 
 
@@ -958,16 +999,17 @@ thead th {
     width: 82vw;
 
     /*
-      不要再拉到 145vh，
-      讓漸淡位置在手機上更容易看到
+      稍微縮短，
+      讓你在 S25 上就能直接
+      看見透明淡出的過程
     */
 
-    min-height: 120vh;
+    min-height: 105vh;
 
     padding:
       19px
       15px
-      160px;
+      150px;
 
     border-radius:
       25px
@@ -977,7 +1019,8 @@ thead th {
   }
 
 
-  .record-card::before {
+  .record-card::before,
+  .record-card::after {
     border-radius:
       25px
       25px
