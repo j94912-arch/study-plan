@@ -1,0 +1,905 @@
+/* ==================================================
+   基本設定
+================================================== */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5f4ef 0%,
+      #efede7 100%
+    );
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Microsoft JhengHei",
+    sans-serif;
+
+  color: #484440;
+
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* ==================================================
+   頁面
+================================================== */
+
+.page {
+  width: 100%;
+
+  padding:
+    7px
+    7px
+    0;
+}
+
+
+/* ==================================================
+   上方讀書計畫
+================================================== */
+
+.study-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 11px;
+
+  padding: 6px;
+
+  border:
+    1px solid
+    #ebe8e3;
+
+  overflow: hidden;
+}
+
+
+.table-wrapper {
+  width: 100%;
+
+  max-height: 240px;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+}
+
+
+table {
+  border-collapse: separate;
+
+  border-spacing:
+    5px
+    4px;
+
+  min-width: max-content;
+
+  background: #ffffff;
+}
+
+
+th,
+td {
+  padding: 0;
+
+  border: none;
+
+  text-align: center;
+}
+
+
+/* ==================================================
+   上方日期
+================================================== */
+
+thead th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 5;
+
+  min-width: 25px;
+  width: 25px;
+
+  height: 26px;
+
+  background: #ffffff;
+
+  white-space: nowrap;
+}
+
+
+.date {
+  font-size: 8px;
+
+  font-weight: 650;
+
+  line-height: 9px;
+
+  color: #4c4844;
+}
+
+
+.week {
+  margin-top: 1px;
+
+  font-size: 7px;
+
+  line-height: 8px;
+
+  color: #aaa39c;
+}
+
+
+/* ==================================================
+   上方科目
+================================================== */
+
+.subject-header {
+  position: sticky;
+
+  top: 0;
+  left: 0;
+
+  z-index: 20;
+
+  min-width: 40px !important;
+  width: 40px !important;
+
+  background: #ffffff !important;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  color: #99928c;
+}
+
+
+.subject {
+  position: sticky;
+
+  left: 0;
+
+  z-index: 10;
+
+  min-width: 40px;
+  width: 40px;
+
+  height: 23px;
+
+  background: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 650;
+
+  color: #4e4945;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   上方正方形
+================================================== */
+
+.study-cell {
+  min-width: 25px;
+  width: 25px;
+
+  height: 23px;
+
+  padding: 0;
+
+  background:
+    transparent !important;
+
+  cursor: pointer;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-touch-callout: none;
+}
+
+
+.study-square {
+  width: 18px;
+  height: 18px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background: #f0efec;
+
+  border-radius: 3px;
+
+  transform: scale(1);
+
+  transition:
+    transform 0.09s ease,
+    background-color 0.15s ease;
+}
+
+
+.study-cell:active
+.study-square {
+  transform: scale(0.76);
+}
+
+
+/* ==================================================
+   上方八科顏色
+================================================== */
+
+/* 中會 */
+
+.subject-0.planned
+.study-square {
+  background: #e7c0b2;
+}
+
+.subject-0.completed
+.study-square {
+  background: #ad706b;
+}
+
+
+/* 高會 */
+
+.subject-1.planned
+.study-square {
+  background: #f0dfb5;
+}
+
+.subject-1.completed
+.study-square {
+  background: #b59b69;
+}
+
+
+/* 管會 */
+
+.subject-2.planned
+.study-square {
+  background: #d2dac9;
+}
+
+.subject-2.completed
+.study-square {
+  background: #8b9b8d;
+}
+
+
+/* 審計 */
+
+.subject-3.planned
+.study-square {
+  background: #cdd7db;
+}
+
+.subject-3.completed
+.study-square {
+  background: #81939c;
+}
+
+
+/* 稅法 */
+
+.subject-4.planned
+.study-square {
+  background: #dcd9e1;
+}
+
+.subject-4.completed
+.study-square {
+  background: #958f9f;
+}
+
+
+/* 公司法 */
+
+.subject-5.planned
+.study-square {
+  background: #e2dacf;
+}
+
+.subject-5.completed
+.study-square {
+  background: #9c907e;
+}
+
+
+/* 證交法 */
+
+.subject-6.planned
+.study-square {
+  background: #d7d5d1;
+}
+
+.subject-6.completed
+.study-square {
+  background: #898985;
+}
+
+
+/* 商會法 */
+
+.subject-7.planned
+.study-square {
+  background: #ddc6b5;
+}
+
+.subject-7.completed
+.study-square {
+  background: #b2917b;
+}
+
+
+/* ==================================================
+   上方完成堂數
+================================================== */
+
+.count-header {
+  min-width: 38px !important;
+  width: 38px !important;
+
+  background: #ffffff !important;
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  color: #99928c;
+}
+
+
+.count-cell {
+  min-width: 38px;
+  width: 38px;
+
+  height: 23px;
+
+  background: #ffffff;
+
+  color: #55504c;
+}
+
+
+.count-number {
+  display: inline;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+.count-text {
+  display: inline;
+
+  margin-left: 1px;
+
+  font-size: 7px;
+
+  color: #aaa39c;
+}
+
+
+/* ==================================================
+   下方紀錄區
+================================================== */
+
+.records-section {
+  width: calc(100% + 14px);
+
+  margin-left: -7px;
+
+  margin-top: 13px;
+
+  /*
+    卡片可以繼續往螢幕下面延伸
+  */
+
+  overflow: visible;
+
+  perspective: 1000px;
+}
+
+
+/* ==================================================
+   3D 卡片輪播
+================================================== */
+
+.records-carousel {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  padding:
+    8px
+    10vw
+    80px;
+
+  scroll-snap-type:
+    x mandatory;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling:
+    touch;
+
+  scrollbar-width: none;
+
+  perspective: 900px;
+}
+
+
+.records-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ==================================================
+   一科一張長卡
+================================================== */
+
+.record-card {
+  position: relative;
+
+  flex:
+    0 0
+    80vw;
+
+  width: 80vw;
+
+  min-height:
+    calc(100vh - 280px);
+
+  margin-right: -5vw;
+
+  padding:
+    20px
+    17px
+    80px;
+
+  scroll-snap-align: center;
+
+  transform-origin:
+    center top;
+
+  /*
+    統一半透明白色
+  */
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.56
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+
+  border-radius:
+    24px
+    24px
+    0
+    0;
+
+  /*
+    預設代表卡片在後方
+  */
+
+  transform:
+    scale(0.88)
+    translateY(18px)
+    rotateY(8deg);
+
+  opacity: 0.52;
+
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   正中央卡片
+
+   會有「跑到前面」的效果
+================================================== */
+
+.record-card.active {
+  transform:
+    scale(1)
+    translateY(0)
+    rotateY(0deg);
+
+  opacity: 1;
+
+  z-index: 10;
+}
+
+
+/* ==================================================
+   左側卡片
+================================================== */
+
+.record-card.before {
+  transform:
+    scale(0.86)
+    translateX(7vw)
+    translateY(20px)
+    rotateY(10deg);
+
+  opacity: 0.42;
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   右側卡片
+================================================== */
+
+.record-card.after {
+  transform:
+    scale(0.86)
+    translateX(-7vw)
+    translateY(20px)
+    rotateY(-10deg);
+
+  opacity: 0.42;
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   科目名稱
+================================================== */
+
+.record-subject {
+  margin:
+    2px
+    0
+    19px;
+
+  text-align: center;
+
+  font-size: 22px;
+
+  font-weight: 750;
+
+  letter-spacing: 3px;
+
+  color: #45413e;
+}
+
+
+/* ==================================================
+   日期
+================================================== */
+
+.record-date {
+  display: block;
+
+  width: 100%;
+
+  height: 42px;
+
+  margin-bottom: 11px;
+
+  padding:
+    0
+    12px;
+
+  border:
+    1px solid
+    rgba(
+      120,
+      110,
+      100,
+      0.15
+    );
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+
+  font-size: 13px;
+
+  color: #514c48;
+}
+
+
+/* ==================================================
+   輸入區
+================================================== */
+
+.record-input {
+  display: block;
+
+  width: 100%;
+
+  height: 92px;
+
+  padding:
+    12px
+    13px;
+
+  resize: none;
+
+  border:
+    1px solid
+    rgba(
+      120,
+      110,
+      100,
+      0.15
+    );
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: #4c4844;
+}
+
+
+.record-input::placeholder {
+  color: #b9b3ad;
+}
+
+
+.record-input:focus,
+.record-date:focus {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+
+  border-color:
+    rgba(
+      100,
+      90,
+      80,
+      0.27
+    );
+}
+
+
+/* ==================================================
+   歷史紀錄
+================================================== */
+
+.history-list {
+  width: 100%;
+
+  margin-top: 22px;
+}
+
+
+/* ==================================================
+   每一筆紀錄
+
+   不再包一堆小卡片，
+   讓內容自然往下延伸
+================================================== */
+
+.history-item {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    0
+    2px
+    20px
+    17px;
+
+  margin-bottom: 18px;
+
+  border-left:
+    1px solid
+    rgba(
+      90,
+      80,
+      70,
+      0.16
+    );
+}
+
+
+/* 時間軸的小點 */
+
+.history-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -4px;
+  top: 4px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      100,
+      92,
+      84,
+      0.48
+    );
+}
+
+
+/* 日期 */
+
+.history-date {
+  margin-bottom: 7px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color:
+    rgba(
+      70,
+      65,
+      60,
+      0.62
+    );
+}
+
+
+/* 內容 */
+
+.history-text {
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #4b4743;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+}
+
+
+/* ==================================================
+   沒有歷史紀錄時
+================================================== */
+
+.history-empty {
+  padding:
+    25px
+    0;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color:
+    rgba(
+      80,
+      75,
+      70,
+      0.32
+    );
+}
+
+
+/* ==================================================
+   手機
+================================================== */
+
+@media (max-width: 600px) {
+
+  .record-card {
+    flex-basis: 82vw;
+
+    width: 82vw;
+
+    min-height:
+      calc(100vh - 270px);
+
+    padding:
+      18px
+      15px
+      100px;
+  }
+
+
+  .records-carousel {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+
+
+  .record-subject {
+    font-size: 20px;
+
+    margin-bottom: 16px;
+  }
+
+}
