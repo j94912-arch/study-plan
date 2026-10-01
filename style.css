@@ -1,5 +1,5 @@
 /* ==================================================
-   基本設定
+   1. 全域
 ================================================== */
 
 * {
@@ -15,12 +15,7 @@ body {
   width: 100%;
   min-height: 100%;
 
-  background:
-    linear-gradient(
-      180deg,
-      #f5f4ef 0%,
-      #efede7 100%
-    );
+  background: #f3f1eb;
 }
 
 body {
@@ -44,7 +39,7 @@ textarea {
 
 
 /* ==================================================
-   頁面
+   2. 整個頁面
 ================================================== */
 
 .page {
@@ -58,25 +53,29 @@ textarea {
 
 
 /* ==================================================
-   上方讀書計畫
+   3. 上方讀書計畫
 ================================================== */
 
 .study-card {
   width: 100%;
 
-  background: #ffffff;
-
-  border-radius: 11px;
-
   padding: 6px;
+
+  background: #ffffff;
 
   border:
     1px solid
     #ebe8e3;
 
+  border-radius: 11px;
+
   overflow: hidden;
 }
 
+
+/* ==================================================
+   4. 上方表格滑動
+================================================== */
 
 .table-wrapper {
   width: 100%;
@@ -92,6 +91,10 @@ textarea {
 }
 
 
+/* ==================================================
+   5. 表格
+================================================== */
+
 table {
   border-collapse: separate;
 
@@ -104,7 +107,6 @@ table {
   background: #ffffff;
 }
 
-
 th,
 td {
   padding: 0;
@@ -116,7 +118,7 @@ td {
 
 
 /* ==================================================
-   上方日期
+   6. 日期
 ================================================== */
 
 thead th {
@@ -136,7 +138,6 @@ thead th {
   white-space: nowrap;
 }
 
-
 .date {
   font-size: 8px;
 
@@ -146,7 +147,6 @@ thead th {
 
   color: #4c4844;
 }
-
 
 .week {
   margin-top: 1px;
@@ -160,7 +160,7 @@ thead th {
 
 
 /* ==================================================
-   上方科目
+   7. 科目
 ================================================== */
 
 .subject-header {
@@ -182,7 +182,6 @@ thead th {
 
   color: #99928c;
 }
-
 
 .subject {
   position: sticky;
@@ -209,7 +208,7 @@ thead th {
 
 
 /* ==================================================
-   上方正方形
+   8. 上方正方形
 ================================================== */
 
 .study-cell {
@@ -220,8 +219,7 @@ thead th {
 
   padding: 0;
 
-  background:
-    transparent !important;
+  background: transparent !important;
 
   cursor: pointer;
 
@@ -230,7 +228,6 @@ thead th {
 
   -webkit-touch-callout: none;
 }
-
 
 .study-square {
   width: 18px;
@@ -250,123 +247,105 @@ thead th {
     background-color 0.15s ease;
 }
 
-
-.study-cell:active
-.study-square {
+.study-cell:active .study-square {
   transform: scale(0.76);
 }
 
 
 /* ==================================================
-   上方八科顏色
+   9. 八科顏色
 ================================================== */
 
 /* 中會 */
 
-.subject-0.planned
-.study-square {
+.subject-0.planned .study-square {
   background: #e7c0b2;
 }
 
-.subject-0.completed
-.study-square {
+.subject-0.completed .study-square {
   background: #ad706b;
 }
 
 
 /* 高會 */
 
-.subject-1.planned
-.study-square {
+.subject-1.planned .study-square {
   background: #f0dfb5;
 }
 
-.subject-1.completed
-.study-square {
+.subject-1.completed .study-square {
   background: #b59b69;
 }
 
 
 /* 管會 */
 
-.subject-2.planned
-.study-square {
+.subject-2.planned .study-square {
   background: #d2dac9;
 }
 
-.subject-2.completed
-.study-square {
+.subject-2.completed .study-square {
   background: #8b9b8d;
 }
 
 
 /* 審計 */
 
-.subject-3.planned
-.study-square {
+.subject-3.planned .study-square {
   background: #cdd7db;
 }
 
-.subject-3.completed
-.study-square {
+.subject-3.completed .study-square {
   background: #81939c;
 }
 
 
 /* 稅法 */
 
-.subject-4.planned
-.study-square {
+.subject-4.planned .study-square {
   background: #dcd9e1;
 }
 
-.subject-4.completed
-.study-square {
+.subject-4.completed .study-square {
   background: #958f9f;
 }
 
 
 /* 公司法 */
 
-.subject-5.planned
-.study-square {
+.subject-5.planned .study-square {
   background: #e2dacf;
 }
 
-.subject-5.completed
-.study-square {
+.subject-5.completed .study-square {
   background: #9c907e;
 }
 
 
 /* 證交法 */
 
-.subject-6.planned
-.study-square {
+.subject-6.planned .study-square {
   background: #d7d5d1;
 }
 
-.subject-6.completed
-.study-square {
+.subject-6.completed .study-square {
   background: #898985;
 }
 
 
 /* 商會法 */
 
-.subject-7.planned
-.study-square {
+.subject-7.planned .study-square {
   background: #ddc6b5;
 }
 
-.subject-7.completed
-.study-square {
+.subject-7.completed .study-square {
   background: #b2917b;
 }
 
 
 /* ==================================================
-   上方完成堂數
+   10. 完成堂數
 ================================================== */
 
 .count-header {
@@ -382,7 +361,6 @@ thead th {
   color: #99928c;
 }
 
-
 .count-cell {
   min-width: 38px;
   width: 38px;
@@ -394,7 +372,6 @@ thead th {
   color: #55504c;
 }
 
-
 .count-number {
   display: inline;
 
@@ -402,7 +379,6 @@ thead th {
 
   font-weight: 700;
 }
-
 
 .count-text {
   display: inline;
@@ -416,7 +392,7 @@ thead th {
 
 
 /* ==================================================
-   下方紀錄區
+   11. 下方紀錄區
 ================================================== */
 
 .records-section {
@@ -424,20 +400,16 @@ thead th {
 
   margin-left: -7px;
 
-  margin-top: 13px;
-
-  /*
-    卡片可以繼續往螢幕下面延伸
-  */
+  margin-top: 14px;
 
   overflow: visible;
 
-  perspective: 1000px;
+  perspective: 1200px;
 }
 
 
 /* ==================================================
-   3D 卡片輪播
+   12. 橫向卡片軌道
 ================================================== */
 
 .records-carousel {
@@ -445,31 +417,36 @@ thead th {
 
   align-items: flex-start;
 
-  gap: 0;
-
   width: 100%;
 
   overflow-x: auto;
   overflow-y: visible;
 
-  padding:
-    8px
-    10vw
-    80px;
+  /*
+    中間卡片置中
+  */
 
-  scroll-snap-type:
-    x mandatory;
+  padding:
+    10px
+    9vw
+    0;
+
+  /*
+    卡片稍微互相重疊
+  */
+
+  gap: 0;
+
+  scroll-snap-type: x mandatory;
 
   scroll-behavior: smooth;
 
-  -webkit-overflow-scrolling:
-    touch;
+  -webkit-overflow-scrolling: touch;
 
   scrollbar-width: none;
 
-  perspective: 900px;
+  perspective: 1000px;
 }
-
 
 .records-carousel::-webkit-scrollbar {
   display: none;
@@ -477,27 +454,47 @@ thead th {
 
 
 /* ==================================================
-   一科一張長卡
+   13. 每一科的超長卡片
+
+   這裡是這次最重要的修改
 ================================================== */
 
 .record-card {
   position: relative;
 
-  flex:
-    0 0
-    80vw;
+  /*
+    卡片寬度
+  */
 
-  width: 80vw;
+  flex: 0 0 82vw;
 
-  min-height:
-    calc(100vh - 280px);
+  width: 82vw;
 
-  margin-right: -5vw;
+  /*
+    至少 135% 手機高度。
+
+    因此第一次看到卡片時，
+    底部一定會跑到手機畫面外。
+  */
+
+  min-height: 135vh;
+
+  /*
+    有紀錄時可以繼續自然增長
+  */
+
+  height: auto;
+
+  /*
+    卡片彼此稍微重疊
+  */
+
+  margin-right: -8vw;
 
   padding:
-    20px
+    21px
     17px
-    80px;
+    180px;
 
   scroll-snap-align: center;
 
@@ -505,7 +502,7 @@ thead th {
     center top;
 
   /*
-    統一半透明白色
+    半透明白色
   */
 
   background:
@@ -516,11 +513,15 @@ thead th {
       0.56
     );
 
+  /*
+    玻璃感
+  */
+
   backdrop-filter:
-    blur(12px);
+    blur(14px);
 
   -webkit-backdrop-filter:
-    blur(12px);
+    blur(14px);
 
   border:
     1px solid
@@ -528,28 +529,40 @@ thead th {
       255,
       255,
       255,
-      0.72
+      0.76
     );
 
+  /*
+    只有頂端有圓角。
+
+    底部沒有圓角，
+    因為本來就不應該看到底部。
+  */
+
   border-radius:
-    24px
-    24px
+    26px
+    26px
     0
     0;
 
   /*
-    預設代表卡片在後方
+    預設在後方
   */
 
   transform:
-    scale(0.88)
-    translateY(18px)
-    rotateY(8deg);
+    scale(0.82)
+    translateY(34px);
 
-  opacity: 0.52;
+  opacity: 0.30;
 
   transition:
-    transform 0.28s ease,
+    transform 0.32s
+    cubic-bezier(
+      0.22,
+      0.61,
+      0.36,
+      1
+    ),
     opacity 0.28s ease;
 
   z-index: 1;
@@ -557,9 +570,9 @@ thead th {
 
 
 /* ==================================================
-   正中央卡片
+   14. 正中央卡片
 
-   會有「跑到前面」的效果
+   放大＋向上＋跑到最前面
 ================================================== */
 
 .record-card.active {
@@ -570,53 +583,53 @@ thead th {
 
   opacity: 1;
 
-  z-index: 10;
+  z-index: 20;
 }
 
 
 /* ==================================================
-   左側卡片
+   15. 左側卡片
 ================================================== */
 
 .record-card.before {
   transform:
-    scale(0.86)
-    translateX(7vw)
-    translateY(20px)
-    rotateY(10deg);
+    translateX(8vw)
+    translateY(36px)
+    scale(0.80)
+    rotateY(13deg);
 
-  opacity: 0.42;
+  opacity: 0.26;
 
-  z-index: 1;
+  z-index: 2;
 }
 
 
 /* ==================================================
-   右側卡片
+   16. 右側卡片
 ================================================== */
 
 .record-card.after {
   transform:
-    scale(0.86)
-    translateX(-7vw)
-    translateY(20px)
-    rotateY(-10deg);
+    translateX(-8vw)
+    translateY(36px)
+    scale(0.80)
+    rotateY(-13deg);
 
-  opacity: 0.42;
+  opacity: 0.26;
 
-  z-index: 1;
+  z-index: 2;
 }
 
 
 /* ==================================================
-   科目名稱
+   17. 科目名稱
 ================================================== */
 
 .record-subject {
   margin:
-    2px
+    5px
     0
-    19px;
+    25px;
 
   text-align: center;
 
@@ -624,14 +637,14 @@ thead th {
 
   font-weight: 750;
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 
-  color: #45413e;
+  color: #494541;
 }
 
 
 /* ==================================================
-   日期
+   18. 日期選擇
 ================================================== */
 
 .record-date {
@@ -639,24 +652,24 @@ thead th {
 
   width: 100%;
 
-  height: 42px;
+  height: 44px;
 
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 
   padding:
     0
-    12px;
+    14px;
 
   border:
     1px solid
     rgba(
-      120,
-      110,
       100,
-      0.15
+      92,
+      84,
+      0.14
     );
 
-  border-radius: 12px;
+  border-radius: 13px;
 
   outline: none;
 
@@ -665,67 +678,17 @@ thead th {
       255,
       255,
       255,
-      0.62
-    );
-
-  font-size: 13px;
-
-  color: #514c48;
-}
-
-
-/* ==================================================
-   輸入區
-================================================== */
-
-.record-input {
-  display: block;
-
-  width: 100%;
-
-  height: 92px;
-
-  padding:
-    12px
-    13px;
-
-  resize: none;
-
-  border:
-    1px solid
-    rgba(
-      120,
-      110,
-      100,
-      0.15
-    );
-
-  border-radius: 12px;
-
-  outline: none;
-
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.62
+      0.63
     );
 
   font-size: 14px;
 
-  line-height: 1.55;
+  color: #514c48;
 
-  color: #4c4844;
+  appearance: auto;
+  -webkit-appearance: auto;
 }
 
-
-.record-input::placeholder {
-  color: #b9b3ad;
-}
-
-
-.record-input:focus,
 .record-date:focus {
   background:
     rgba(
@@ -737,30 +700,112 @@ thead th {
 
   border-color:
     rgba(
-      100,
       90,
-      80,
-      0.27
+      82,
+      74,
+      0.26
     );
 }
 
 
 /* ==================================================
-   歷史紀錄
+   19. 打字區
+================================================== */
+
+.record-input {
+  display: block;
+
+  width: 100%;
+
+  height: 105px;
+
+  padding:
+    13px
+    14px;
+
+  resize: none;
+
+  border:
+    1px solid
+    rgba(
+      100,
+      92,
+      84,
+      0.14
+    );
+
+  border-radius: 13px;
+
+  outline: none;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.63
+    );
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #4c4844;
+}
+
+.record-input::placeholder {
+  color:
+    rgba(
+      90,
+      82,
+      74,
+      0.35
+    );
+}
+
+.record-input:focus {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+
+  border-color:
+    rgba(
+      90,
+      82,
+      74,
+      0.26
+    );
+}
+
+
+/* ==================================================
+   20. 歷史紀錄區
 ================================================== */
 
 .history-list {
   width: 100%;
 
-  margin-top: 22px;
+  margin-top: 32px;
 }
 
 
 /* ==================================================
-   每一筆紀錄
+   21. 沒紀錄
 
-   不再包一堆小卡片，
-   讓內容自然往下延伸
+   完全不顯示任何說明文字
+================================================== */
+
+.history-empty {
+  display: none;
+}
+
+
+/* ==================================================
+   22. 每一筆歷史紀錄
 ================================================== */
 
 .history-item {
@@ -768,26 +813,32 @@ thead th {
 
   width: 100%;
 
+  margin-bottom: 26px;
+
   padding:
     0
-    2px
-    20px
-    17px;
+    5px
+    22px
+    21px;
 
-  margin-bottom: 18px;
+  /*
+    淡淡的垂直時間線
+  */
 
   border-left:
     1px solid
     rgba(
-      90,
-      80,
-      70,
-      0.16
+      82,
+      75,
+      68,
+      0.14
     );
 }
 
 
-/* 時間軸的小點 */
+/* ==================================================
+   23. 時間線圓點
+================================================== */
 
 .history-item::before {
   content: "";
@@ -795,7 +846,7 @@ thead th {
   position: absolute;
 
   left: -4px;
-  top: 4px;
+  top: 5px;
 
   width: 7px;
   height: 7px;
@@ -804,39 +855,45 @@ thead th {
 
   background:
     rgba(
-      100,
-      92,
-      84,
-      0.48
+      82,
+      75,
+      68,
+      0.46
     );
 }
 
 
-/* 日期 */
+/* ==================================================
+   24. 紀錄日期
+================================================== */
 
 .history-date {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 
   font-size: 11px;
 
   font-weight: 700;
+
+  letter-spacing: 0.5px;
 
   color:
     rgba(
       70,
       65,
       60,
-      0.62
+      0.58
     );
 }
 
 
-/* 內容 */
+/* ==================================================
+   25. 紀錄文字
+================================================== */
 
 .history-text {
   font-size: 14px;
 
-  line-height: 1.65;
+  line-height: 1.7;
 
   color: #4b4743;
 
@@ -847,59 +904,80 @@ thead th {
 
 
 /* ==================================================
-   沒有歷史紀錄時
-================================================== */
-
-.history-empty {
-  padding:
-    25px
-    0;
-
-  text-align: center;
-
-  font-size: 11px;
-
-  color:
-    rgba(
-      80,
-      75,
-      70,
-      0.32
-    );
-}
-
-
-/* ==================================================
-   手機
+   26. 手機版
 ================================================== */
 
 @media (max-width: 600px) {
+
+  .page {
+    padding:
+      7px
+      7px
+      0;
+  }
+
+
+  .records-section {
+    margin-top: 14px;
+  }
+
+
+  .records-carousel {
+    padding:
+      8px
+      9vw
+      0;
+  }
+
 
   .record-card {
     flex-basis: 82vw;
 
     width: 82vw;
 
-    min-height:
-      calc(100vh - 270px);
+    /*
+      Samsung S25 實機：
+      一定延伸超過目前畫面
+    */
+
+    min-height: 140vh;
 
     padding:
-      18px
+      19px
       15px
-      100px;
-  }
+      180px;
 
-
-  .records-carousel {
-    padding-left: 9vw;
-    padding-right: 9vw;
+    border-radius:
+      25px
+      25px
+      0
+      0;
   }
 
 
   .record-subject {
-    font-size: 20px;
+    margin:
+      4px
+      0
+      22px;
 
-    margin-bottom: 16px;
+    font-size: 21px;
+
+    letter-spacing: 4px;
+  }
+
+
+  .record-date {
+    height: 43px;
+
+    font-size: 14px;
+  }
+
+
+  .record-input {
+    height: 105px;
+
+    font-size: 15px;
   }
 
 }
